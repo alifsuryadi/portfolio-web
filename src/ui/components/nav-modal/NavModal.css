@@ -1,0 +1,117 @@
+#nav-modal {
+  width: 50vw;
+  height: 100vh;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  background: var(--clr-white);
+  justify-content: space-evenly;
+  flex-direction: column;
+  z-index: 3;
+  transition: right .4s cubic-bezier(.77,.22,.175,1)
+}
+
+#nav-modal .inner-container {
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 3rem;
+}
+
+#nav-modal .email-link {
+  font-size: var(--fs-medium);
+  color: var(--clr-dark-purple);
+}
+
+#nav-modal .email-link:hover {
+  color: var(--clr-light-purple);
+}
+
+.modal-navigation {
+  padding-top: 2rem;
+}
+
+.modal-link {
+  position: relative;
+  padding: 0.3rem;
+}
+
+.modal-link .link {
+  font-size: 3.75rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  color: var(--clr-dark-purple);
+  transition: color ease 0.2s,
+              margin-left ease 0.2s;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--clr-light-purple);
+  margin-left: 10px;
+}
+
+.social-media-container {
+  padding:0;
+}
+
+#nav-modal .social-media-wrapper {
+	justify-content: flex-start;
+}
+
+#nav-modal .social-media-link {
+  font-size: 2.5rem;
+  color: var(--clr-dark-purple);
+}
+
+#nav-modal .social-media-link:hover {
+ color: var(--clr-light-purple);
+}
+
+@media screen and (max-width: 800px) {
+  #nav-modal {
+    width: 100%;
+  }
+
+  #nav-modal.is-open {
+    transform: translate(0, 0);
+  }
+
+  #nav-modal .inner-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  #nav-modal .social-media-wrapper {
+    justify-content: center;
+  }
+
+  .modal-link .link,
+  #nav-modal .social-media-link {
+    font-size: var(--fs-large);
+  }
+
+  .link:hover {
+    margin-left: 0;
+  }
+  
+  .modal-navigation {
+    padding-top: 0;
+  }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 1222px) {
+  #nav-modal {
+    width: 55vw;
+  }
+	.modal-link .link {
+    font-size: var(--fs-large);
+  }
+}

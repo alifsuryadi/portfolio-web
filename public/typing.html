@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="name"></div>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+      new TypeIt("#name", {
+        speed: 50,
+        startDelay: 900,
+      })
+        .type('<span class="place">Front</span>-End ', { delay: 100 })
+        .type("Depeloper", { delay: 200 })
+        .move(-6, { delay: 200 })
+        .delete(1)
+        .type("v", { delay: 400 })
+        .move(null, { to: "START", instant: true, delay: 300 })
+        .pause(200)
+        .move(5, { delay: 200 })
+        .delete(".place", { delay: 800, instant: true })
+        .type("Back", { delay: 200 })
+        .move(4, { delay: 400 })
+        .pause(200)
+        .delete(".place", { delay: 800, instant: true })
+        .type("Full St", { delay: 400 })
+        .move(-2, { delay: 200 })
+        .delete(1)
+        .type("-", { delay: 400 })
+        .move(2, { delay: 200 })
+        .type("ack", { delay: 400 })
+        .move(null, { to: "END" })
+        .go();
+    </script>
+  </body>
+</html>
