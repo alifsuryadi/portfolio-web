@@ -15,7 +15,7 @@ export const Name = () => {
         "",
         500,
         "Full Sta",
-        200,
+        300,
         "Full",
         1000,
         "Full-Stack",

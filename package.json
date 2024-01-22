@@ -24,8 +24,7 @@
     "react-router-dom": "^6.9.0",
     "react-scroll": "^1.8.9",
     "react-simple-animate": "^3.5.2",
-    "react-type-animation": "^3.2.0",
-    "typeit": "^8.8.3"
+    "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
