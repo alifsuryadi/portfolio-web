@@ -1,5 +1,5 @@
 import { AOSElement } from "../../../../../ui";
-import profileImg from "../../../../../assets/alif-suryadi-profile.jpg";
+import profileImg from "../../../../../assets/alif-suryadi-profile-2.webp";
 import "aos/dist/aos.css";
 import "./About.css";
 
@@ -24,11 +24,11 @@ export const About = () => {
   return (
     <section id="about" className="about">
       <div className="width-wrapper flex-control">
-        <div className="col-left">
+        <div className="col-left ">
           <AOSElement duration="900">
             <h2>About me</h2>
           </AOSElement>
-          <div className="text-content">
+          <div className="text-content scroll-reveal ">
             <AOSElement duration="900">
               <p>
                 I am a self-taught Full-Stack Web Developer passionate about
