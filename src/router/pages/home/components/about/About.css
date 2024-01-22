@@ -96,24 +96,6 @@
   font-weight: var(--fw-bold);
 }
 
-.scroll-reveal p {
-  color: hsl(0 0% 100%/ 0.2);
-  background-clip: text;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-image: linear-gradient(90deg, #ffff, #e284ff);
-  animation: scroll-reveal linear forwards;
-  animation-timeline: view();
-  animation-range-start: cover 20vh;
-  animation-range-end: cover 40vh;
-}
-
-@keyframes scroll-reveal {
-  to {
-    background-size: 100% 100%;
-  }
-}
-
 @media screen and (max-width: 800px) {
   #about {
     padding: 2rem 0;

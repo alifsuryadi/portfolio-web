@@ -28,7 +28,7 @@ export const About = () => {
           <AOSElement duration="900">
             <h2>About me</h2>
           </AOSElement>
-          <div className="text-content scroll-reveal ">
+          <div className="text-content">
             <AOSElement duration="900">
               <p>
                 I am a self-taught Full-Stack Web Developer passionate about
