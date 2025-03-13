@@ -9,16 +9,20 @@ export const About = () => {
     { name: "Laravel" },
     { name: "Express" },
     { name: "Vue" },
-    { name: "EJS" },
-    { name: "Git" },
-  ];
-  const stackList2 = [
+    { name: "Next" },
+    { name: "TypeScript" },
     { name: "JavaScript" },
     { name: "PHP" },
+  ];
+  const stackList2 = [
+    { name: "Python" },
+    { name: "Tensorflow" },
+    { name: "Google Cloud" },
     { name: "Tailwind" },
     { name: "SQL" },
     { name: "SASS" },
     { name: "CSS3" },
+    { name: "Git" },
   ];
 
   return (
@@ -31,10 +35,13 @@ export const About = () => {
           <div className="text-content">
             <AOSElement duration="900">
               <p>
-                I am a self-taught Full-Stack Web Developer passionate about
+                I am a self-taught Full-Stack Developer passionate about
                 utilizing my skills and expertise to create technology and
-                solutions that deliver value and empowers individuals to achieve
-                their goals.
+                solutions that deliver value and empower individuals to achieve
+                their goals. Additionally, I am actively learning and exploring
+                Machine Learning, seeking to integrate its principles into my
+                projects to further enhance their capabilities and
+                effectiveness.
               </p>
             </AOSElement>
             <AOSElement duration="900">
