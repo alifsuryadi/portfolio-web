@@ -53,7 +53,7 @@ const projectsData = [
       "Pasal Pintar is an AI-powered legal information application designed to provide users with fast and accurate solutions for their legal needs. The application aims to simplify access to legal knowledge by presenting comprehensive and easy-to-understand explanations of laws and regulations in Indonesia.",
     technologies: "TypeScript / Firebase / Flutter / Python / Tensorflow",
     repo_link: "https://github.com/Project404-PasalPintar",
-    url: "https://github.com/Project404-PasalPintar",
+    url: "https://pasalpintar.netlify.app/",
   },
   // {
   //   name: "Cuwaca",
