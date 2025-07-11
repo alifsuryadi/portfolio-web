@@ -12,7 +12,7 @@ export const Footer = () => {
             </a>
           </div>
           <p className="copyright">
-            ©2023 Made by{" "}
+            ©2025 Made by{" "}
             <a href="https://github.com/alifsuryadi">Alif Suryadi</a>.
           </p>
         </div>

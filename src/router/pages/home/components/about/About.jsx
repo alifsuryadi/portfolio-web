@@ -5,24 +5,32 @@ import "./About.css";
 
 export const About = () => {
   const stackList1 = [
-    { name: "React" },
-    { name: "Laravel" },
-    { name: "Express" },
-    { name: "Vue" },
-    { name: "Next" },
     { name: "TypeScript" },
-    { name: "JavaScript" },
+    { name: "React" },
+    { name: "Next.js" },
+    { name: "Flutter" },
+    { name: "Node.js" },
+    { name: "Go (Golang)" },
+    { name: "Python" },
     { name: "PHP" },
+    { name: "Docker" },
+    { name: "GCP" },
+    { name: "AWS" },
+    { name: "Git" },
   ];
   const stackList2 = [
-    { name: "Python" },
-    { name: "Tensorflow" },
-    { name: "Google Cloud" },
-    { name: "Tailwind" },
-    { name: "SQL" },
-    { name: "SASS" },
-    { name: "CSS3" },
-    { name: "Git" },
+    { name: "Laravel" },
+    { name: "Express.js" },
+    { name: "Gin (Go)" },
+    { name: "REST API" },
+    { name: "PostgreSQL" },
+    { name: "MySQL" },
+    { name: "Firebase" },
+    { name: "System Design" },
+    { name: "CI/CD" },
+    { name: "TensorFlow" },
+    { name: "PyTorch" },
+    { name: "LLM (GenAI)" },
   ];
 
   return (
