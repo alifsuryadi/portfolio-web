@@ -12,8 +12,8 @@ export const Footer = () => {
             </a>
           </div>
           <p className="copyright">
-            ©2025 Made by{" "}
-            <a href="https://github.com/alifsuryadi">Alif Suryadi</a>.
+            Made with ❤️ by{" "}
+            <a href="https://github.com/alifsuryadi">Alif Suryadi</a>
           </p>
         </div>
       </AOSElement>
