@@ -159,10 +159,8 @@
     justify-content: center;
   }
 
-  #hero .bg-img {
-    width: auto;
-    height: auto;
-    margin-left: -25%;
+  .neural-core-wrapper {
+    display: none;
   }
 
   .lead {

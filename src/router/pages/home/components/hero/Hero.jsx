@@ -1,20 +1,15 @@
 import { useEffect, useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { AOSElement } from "../../../../../ui";
-import backgroundImg from "../../../../../assets/peter-olexa-Q5GnQxjX7Jk-unsplash-PhotoRoom.png-PhotoRoom.webp";
+import { FloatingNeuralCore } from "../../../../../components/three/FloatingNeuralCore";
 import "./Hero.css";
 import { Name } from "../../../../../ui/components/name-typing/Name";
 
 export const Hero = () => {
   const [loaded, setLoaded] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     setLoaded(true);
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -40,19 +35,7 @@ export const Hero = () => {
               </p>
             </AOSElement>
           </div>
-          <div className="hero-bg-container">
-            <AOSElement duration="900" delay="100">
-              <img
-                src={backgroundImg}
-                className={`bg-img ${!scrollY ? "bg-img-float" : ""}`}
-                style={{ transform: `translateY(${scrollY * -0.3}px)` }}
-                width="100%"
-                height="100%"
-                alt="Hero background image"
-              />
-            </AOSElement>
-            <div className="gradient-layer"></div>
-          </div>
+          <FloatingNeuralCore />
           <div
             className={`scroll-down ${loaded ? "scroll-fade-in" : ""}`}
             aria-label="scroll"
