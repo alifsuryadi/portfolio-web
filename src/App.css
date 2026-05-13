@@ -1,3 +1,8 @@
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
+
 .bg-layer-active {
   position: fixed;
   top: 0;

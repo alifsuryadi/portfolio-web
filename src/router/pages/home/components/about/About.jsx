@@ -95,6 +95,12 @@ export const About = () => {
                 className="profile-img"
                 alt="Alif Suryadi profile picture"
               />
+              <img
+                src={profileImg}
+                className="profile-img profile-img-color"
+                alt=""
+                aria-hidden="true"
+              />
             </figure>
           </AOSElement>
         </div>
