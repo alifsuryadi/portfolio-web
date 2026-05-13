@@ -1,9 +1,27 @@
+import { useRef, useEffect } from "react";
 import { AOSElement } from "../../../../../ui";
 import profileImg from "../../../../../assets/alif-suryadi-profile-2.webp";
 import "aos/dist/aos.css";
 import "./About.css";
 
 export const About = () => {
+  const profileRef = useRef(null);
+
+  useEffect(() => {
+    const el = profileRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("in-view");
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   const stackList1 = [
     { name: "TypeScript" },
     { name: "React" },
@@ -89,7 +107,7 @@ export const About = () => {
         </div>
         <div className="col-right">
           <AOSElement duration="900">
-            <figure className="profile-img-container">
+            <figure className="profile-img-container" ref={profileRef}>
               <img
                 src={profileImg}
                 className="profile-img"

@@ -50,8 +50,8 @@
 }
 
 @keyframes colorReveal {
-  0%,  4%  { clip-path: inset(0 0 100% 0); }
-  96%, 100% { clip-path: inset(0 0 0%   0); }
+  0%,  4%  { -webkit-clip-path: inset(0 0 100% 0); clip-path: inset(0 0 100% 0); }
+  96%, 100% { -webkit-clip-path: inset(0 0 0%   0); clip-path: inset(0 0 0%   0); }
 }
 /* ───────────────────────────────────────────────────────── */
 
@@ -75,7 +75,7 @@
   background: linear-gradient(90deg, transparent 0%, #c084fc 50%, transparent 100%);
   border-radius: 0.2rem;
   z-index: 3;
-  animation: scanLine 5s ease-in-out 1.5s infinite;
+  animation: none;
   pointer-events: none;
 }
 
@@ -97,6 +97,14 @@
   transform: translate(5%, 5%);
 }
 
+.profile-img-container.in-view::before {
+  animation: scanLine 5s ease-in-out 0.3s infinite;
+}
+
+.profile-img-container.in-view .profile-img-color {
+  animation: colorReveal 5s ease-in-out 0.3s infinite;
+}
+
 .profile-img {
   position: relative;
   border-radius: 0.2rem;
@@ -108,17 +116,15 @@
 
 .profile-img-color {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;                /* stretch ke semua sisi — tidak bergantung pada resolved % height */
   border-radius: 0.2rem;
+  object-fit: cover;
   -webkit-filter: none;
   filter: none;
+  -webkit-clip-path: inset(0 0 100% 0);
   clip-path: inset(0 0 100% 0);
-  animation: colorReveal 5s ease-in-out 1.5s infinite;
+  animation: none;
   z-index: 2;
-  cursor: pointer;
   pointer-events: none;
 }
 
@@ -198,9 +204,18 @@
     transform: translate(20%, 20%);
   }
 
+  /* Mobile: tampilkan gambar berwarna langsung */
   .profile-img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  .profile-img-container::before {
+    animation: none;
+  }
+
+  .profile-img-color {
+    display: none;
   }
 }
 
