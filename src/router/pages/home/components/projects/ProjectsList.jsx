@@ -4,6 +4,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import projectsData from '../../../../../helpers/projectsData';
 import { AOSElement } from '../../../../../ui';
+import { TiltCard } from '../../../../../components/ui/TiltCard';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './ProjectsList.css'
@@ -45,16 +46,18 @@ const ProjectsList = () => {
           }, [imgRef])
           return (
             <div className="project-wrapper flex-control" key={index}>
-              <figure className="project-img-container flex-control">
-                <img
-                  className="project-img"
-                  src={item.img}
-                  width="100%"
-                  height="100%"
-                  alt="Project image"
-                  ref={imgRef}
-                />
-              </figure>
+              <TiltCard>
+                <figure className="project-img-container flex-control">
+                  <img
+                    className="project-img"
+                    src={item.img}
+                    width="100%"
+                    height="100%"
+                    alt="Project image"
+                    ref={imgRef}
+                  />
+                </figure>
+              </TiltCard>
               <AOSElement duration="300">
                 <div className="project-description">
                   <h3>{item.name}</h3>
