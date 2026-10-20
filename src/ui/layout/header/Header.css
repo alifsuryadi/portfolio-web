@@ -11,13 +11,14 @@
 	max-width: 1200px;
 	width: 100%;
 	margin: auto;
-	grid-template-columns: 4fr 1.5fr;
+	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	padding-bottom: 1rem;
 }
 
 #main-header .col-right {
-	grid-template-columns: 2fr 0.5fr;
+	grid-template-columns: 1fr auto;
+	column-gap: 2.5rem;
 	place-items: center end;
 }
 
