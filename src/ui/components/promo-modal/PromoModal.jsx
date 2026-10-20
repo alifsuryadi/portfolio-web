@@ -5,21 +5,12 @@ import { NEW_PORTFOLIO_URL } from "../../../helpers/links";
 import preview from "../../../assets/new-portfolio-preview.webp";
 import "./PromoModal.css";
 
-const STORAGE_KEY = "new-portfolio-promo-seen";
-
-/* Shown once per browser session, shortly after the page loads. */
+/* Shown on every page load, shortly after the page appears. */
 export const PromoModal = () => {
   const [open, setOpen] = useState(false);
   const ctaRef = useRef(null);
 
   useEffect(() => {
-    let seen = false;
-    try {
-      seen = sessionStorage.getItem(STORAGE_KEY) === "1";
-    } catch {
-      /* storage blocked: show it anyway */
-    }
-    if (seen) return;
     const timer = setTimeout(() => setOpen(true), 1200);
     return () => clearTimeout(timer);
   }, []);
@@ -40,14 +31,7 @@ export const PromoModal = () => {
     };
   }, [open]);
 
-  const close = () => {
-    setOpen(false);
-    try {
-      sessionStorage.setItem(STORAGE_KEY, "1");
-    } catch {
-      /* ignore */
-    }
-  };
+  const close = () => setOpen(false);
 
   if (!open) return null;
 
