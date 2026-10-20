@@ -115,3 +115,10 @@
     font-size: var(--fs-large);
   }
 }
+.modal-link .link-new {
+  color: var(--clr-light-purple);
+}
+
+.modal-link .link-new:hover {
+  color: var(--clr-pink);
+}

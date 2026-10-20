@@ -63,3 +63,25 @@
     display: none;
   }
 }
+.nav-link-new {
+	white-space: nowrap;
+}
+
+.nav-link-new::before {
+	color: var(--clr-lime);
+}
+
+.nav-link-new::after {
+	color: var(--clr-pink);
+}
+
+@media screen and (min-width: 801px) {
+	.navigation {
+		gap: 2rem;
+	}
+
+	.navigation .nav-item {
+		width: auto;
+		flex-shrink: 0;
+	}
+}

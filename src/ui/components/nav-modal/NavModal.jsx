@@ -1,6 +1,7 @@
 import { SocialMedia } from "../socialmedia/SocialMedia";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./NavModal.css";
+import { NEW_PORTFOLIO_URL } from "../../../helpers/links";
 import resume from "../../../assets/AlifSuryadi-Resume.pdf";
 
 export const NavModal = ({ handleNavModal }) => {
@@ -36,6 +37,18 @@ export const NavModal = ({ handleNavModal }) => {
             <a href={resume} target="_blank">
               <span className="link" onClick={handleNavModal}>
                 Resume
+              </span>
+            </a>
+          </li>
+          <li className={`modal-link modal-item`}>
+            <a
+              href={NEW_PORTFOLIO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View my new portfolio (opens in a new tab)"
+            >
+              <span className="link link-new" onClick={handleNavModal}>
+                New Portfolio
               </span>
             </a>
           </li>

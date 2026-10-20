@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { NEW_PORTFOLIO_URL } from '../../../helpers/links';
 import './NavBar.css';
 
 export const NavBar = ({ navOpen }) => {
@@ -40,6 +41,17 @@ export const NavBar = ({ navOpen }) => {
 						</li>
 					)
 				})}
+				<li className="nav-item flex-control">
+					<a
+						href={NEW_PORTFOLIO_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="nav-link nav-link-new"
+						data-text="new portfolio"
+						aria-label="View my new portfolio (opens in a new tab)">
+						<span className="rotating-link">new portfolio</span>
+					</a>
+				</li>
 			</ul>
     </nav>
   )
